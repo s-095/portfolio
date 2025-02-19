@@ -1,43 +1,14 @@
-.projects-carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
-}
+@use '../../styles/variables' as *;
 
-.project-card {
-    min-width: 200px;
-    cursor: pointer;
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2rem;
-    cursor: pointer;
+.projects{
+    h2 {
+            font-size: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            background-color: $primary-color;
+            color: white;
+            padding: 12px;
+            box-shadow: 0px 15px 16px -13px #6c716f;
+            z-index: 2;
+        }
 }

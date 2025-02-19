@@ -2,6 +2,7 @@
 @use '../components/Hero/hero.scss';
 @use '../components/Projects/projects.scss';
 @use '../components/About/about.scss';
+@use '../components/Contact/contact.scss';
 @use 'variables' as *;
 @use 'mixins' as *;
 @use 'reset';
@@ -16,14 +17,14 @@ body {
 }
 
 section {
-    padding: 100px 20px;
+    /* padding: 100px 20px; */
     height: 100vh;
 }
 
-/* .main {
+.main {
     background-image: url(../assets/mountains-bg.avif);
         background-size: cover; // Ajuste l'image pour couvrir toute la zone
         background-position: center; // Centre l'image
         background-repeat: no-repeat; // Empêche la répétition de l'image
         background-attachment: fixed;
-} */
+}
