@@ -1,6 +1,12 @@
 @use '../../styles/variables' as *;
 
 .contact {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffffd6;
+    position: relative;
+    height: 95vh;
+
     h2 {
         font-size: 20px;
         text-transform: uppercase;
@@ -10,5 +16,83 @@
         padding: 12px;
         box-shadow: 0px 15px 16px -13px #6c716f;
         z-index: 2;
+    }
+
+    .contact-container {
+        display: flex;
+        justify-content: center;
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin: 70px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgb(0 0 0 / 23%);
+            ;
+            width: 50%;
+            height: 600px;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                font-size: 25px;
+                margin-bottom: 37px;
+            }
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                width: 55%;
+                margin-bottom: 15px;
+            }
+
+            label {
+                font-size: 14px;
+                font-weight: bold;
+                color: #555;
+                margin-bottom: 5px;
+            }
+
+            input,
+            textarea {
+                padding: 12px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                outline: none;
+                transition: border-color 0.3s;
+
+                &:focus {
+                    border-color: $primary-color;
+                }
+            }
+
+            textarea {
+                min-height: 120px;
+                resize: vertical;
+            }
+
+            button {
+                padding-inline: 54px;
+                margin-top: 32px;
+            }
+        }
+    }
+
+    .github-link {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        color: $primary-color;
+        font-size: 25px;
+        transition: color 0.3s;
+        filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+
+        &:hover {
+            color: #144148;
+            filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.3));
+        }
     }
 }

@@ -1,0 +1,23 @@
+.footer {
+  background-color: black;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer p {
+  color: white;
+  margin: unset;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.footer p a {
+  color: #84c5d0;
+  font-style: unset;
+  margin-inline: 5px;
+  text-decoration: none;
+}
+.footer p a:hover {
+  color: #5e939d;
+}

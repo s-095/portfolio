@@ -4,10 +4,10 @@ const Navbar = () => {
     const [activeSection, setActiveSection] = useState("hero");
 
     const navLinks = [
-        { id: "hero", label: "ACCUEIL" },
-        { id: "about", label: "À PROPOS" },
-        { id: "projects", label: "PROJETS" },
-        { id: "contact", label: "CONTACT" },
+        { id: "hero", label: "Accueil" },
+        { id: "about", label: "À propos" },
+        { id: "projects", label: "Projet" },
+        { id: "contact", label: "Contact" },
     ];
 
     // Fonction de détection du scroll
@@ -47,7 +47,10 @@ const Navbar = () => {
                         <a
                             href={`#${link.id}`}
                             className={activeSection === link.id ? "active" : ""}
-                            onClick={() => scrollToSection(link.id)}
+                            onClick={(event) => {
+                                event.preventDefault();
+                                scrollToSection(link.id);
+                            }}
                         >
                             {link.label}
                         </a>
