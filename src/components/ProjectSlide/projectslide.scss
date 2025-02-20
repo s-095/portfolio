@@ -1,0 +1,116 @@
+@use '../../styles/variables' as *;
+@use 'sass:color';
+
+.project-slide {
+    position: relative;
+    display: flex;
+    width: 69%;
+    margin: 20px 0px;
+    align-items: center;
+    border-radius: 12px;
+
+    .slide-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+
+        .slide-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            background-color: #808383a6;
+            border-radius: 20px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            border-color: white;
+            border-style: solid;
+            border-width: 3px;
+
+            .slide-img {
+                width: 100%;
+                height: 431px;
+                background-color: white;
+                padding-bottom: 3px;
+                border-radius: 20px 20px 0px 0px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 16px 16px 0px 0px;
+                }
+            }
+
+            .slide-txt {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                margin: 20px;
+
+                h3 {
+                    font-size: 21px;
+                    font-weight: 100;
+                    margin: 18px 0px;
+                    color: white;
+                    text-transform: uppercase;
+                    border-style: solid;
+                    background-color: #a8a8a85e;
+                }
+
+                p {
+                    font-size: 21px;
+                    font-weight: 600;
+                    color: white;
+                    height: 67px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .slide-links {
+                    display: flex;
+                    justify-content: center;
+                    gap: 50px;
+
+                    button {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+    .slide-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 24px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: color.adjust($primary-color, $lightness: -10%);
+        }
+    }
+
+    .slide-prev {
+        left: -50px;
+    }
+
+    .slide-next {
+        right: -50px;
+    }
+}

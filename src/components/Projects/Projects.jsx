@@ -1,16 +1,15 @@
 import React from 'react';
+import ProjectSlide from '../ProjectSlide/ProjectSlide.jsx';
+import projects from '../../data/projects.json';
+
 
 const Projects = () => {
+    
     return (
         <section id="projects" className='projects'>
             <h2>Mes projets</h2>
-            <div className="project-card">
-                <h3>Projet 1</h3>
-                <p>Description du projet.</p>
-            </div>
-            <div className="project-card">
-                <h3>Projet 2</h3>
-                <p>Description du projet.</p>
+            <div className='projects-container'>
+                <ProjectSlide projects={projects} />
             </div>
         </section>
     );

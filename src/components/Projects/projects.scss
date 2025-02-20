@@ -1,14 +1,24 @@
 @use '../../styles/variables' as *;
 
-.projects{
+.projects {
+    display: flex;
+    flex-direction: column;
+
     h2 {
-            font-size: 20px;
-            text-transform: uppercase;
-            text-align: center;
-            background-color: $primary-color;
-            color: white;
-            padding: 12px;
-            box-shadow: 0px 15px 16px -13px #6c716f;
-            z-index: 2;
-        }
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: $primary-color;
+        color: white;
+        padding: 12px;
+        box-shadow: 0px 15px 16px -13px #6c716f;
+        z-index: 2;
+    }
+
+    .projects-container {
+        display: flex;
+        border-radius: 27px;
+        justify-content: center;
+        align-items: center;
+    }
 }

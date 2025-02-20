@@ -24,7 +24,8 @@ const About = () => {
                 <div className='about-txt'>
                     <p>Guidée par mon attrait pour <em>l'art et la photographie</em>, j'ai également depuis longtemps fait preuve d'un intérêt pour <em>l'informatique</em>,
                         notamment à travers <em>l'édition de contenus visuels</em>.
-                        Cette passion pour la <em>créativité</em> et la <em>technologie</em> m'a conduite à me spécialiser dans le <em>développement web front-end</em>,
+                        Cette passion pour la <em>créativité</em> et la <em>technologie</em> m'a conduite à suivre une formation chez OpenClassrooms 
+                        afin de me spécialiser dans le <em>développement web front-end</em>,
                         un domaine où je peux combiner design et expérience utilisateur pour créer des <em>interfaces modernes et fonctionnelles</em>.</p>
                 </div>
                 <div className='about-img'>

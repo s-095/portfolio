@@ -1,0 +1,114 @@
+[
+  {
+    "img": "/img/projects/booki.png",
+    "title": "Booki",
+    "description": "Création de la page d'accueil d'une agence de voyage",
+    "details": "Dans ce projet, j'ai créée la page d'accueil d'une agence de voyage en utilisant HTML et CSS. Mon objectif principal était d'intégrer une interface responsive basée sur des maquettes Figma. Ce projet m'a permis de mieux comprendre la structure du code et son adaptation aux exigences de design pour différents appareils.",
+    "objectives": [
+      "Implémenter une interface responsive avec HTML et CSS",
+      "Installer un environnement de développement front-end",
+      "Intégrer du contenu conformément à une maquette avec HTML et CSS"
+    ],
+    "technologies": [
+      "/img/logos/html.svg",
+      "/img/logos/css.svg",
+      "/img/logos/figma.svg"
+    ],
+    "repository": "https://github.com/s-095/OC_P3_booki",
+    "website":"https://s-095.github.io/OC_P3_booki/"
+  },
+  {
+    "img": "/img/projects/ohmyfood.png",
+    "title": "Ohmyfood",
+    "description": "Amélioration de l'interface d'un site mobile avec des animations CSS",
+    "details": "Dans ce projet, j’ai développé l'interface mobile-first du site d’une start-up en intégrant une maquette responsive. J’ai utilisé Sass pour structurer et maintenir les styles, ajouté des animations CSS pour améliorer l'expérience utilisateur, et versionné le projet avec Git et GitHub pour une meilleure gestion et collaboration.",
+    "objectives": [
+      "Intégrer une maquette en mobile-first",
+      "Mettre en œuvre des animations CSS",
+      "Versionner son projet avec Git et GitHub"
+    ],
+    "technologies": [
+      "/img/logos/figma.svg",
+      "/img/logos/css.svg",
+      "/img/logos/sass.svg",
+      "/img/logos/git.svg",
+      "/img/logos/github.svg"
+    ],
+    "repository": "https://github.com/s-095/OC_P4_ohmyfood",
+    "website":"https://s-095.github.io/OC_P4_ohmyfood/"
+  },
+  {
+    "img": "/img/projects/sophie-bluel.png",
+    "title": "Sophie Bluel",
+    "description": "Création d'une page dynamique avec Javascript",
+    "details": "Dans ce projet, j’ai créée une page dynamique pour le site d'une architecte d’intérieur en utilisant JavaScript et une API. J’ai développé la présentation des travaux, une page de connexion admin et une modale d’upload de médias. Ce travail m’a permis de manipuler le DOM, de gérer les événements utilisateurs et de pratiquer la communication avec une API.",
+    "objectives": [
+      "Récupérer les données utilisateurs dans le JavaScript via des formulaires",
+      "Gérer les événements utilisateurs avec JavaScript",
+      "Manipuler les éléments du DOM avec JavaScript"
+    ],
+    "technologies": [
+      "/img/logos/figma.svg",
+      "/img/logos/css.svg",
+      "/img/logos/javascript.svg"
+    ],
+    "repository": "https://github.com/s-095/OC_P6_sophie-bluel",
+    "website":null
+  },
+  {
+    "img": "/img/projects/kasa.png",
+    "title": "Kasa",
+    "description": "Création d'une application web de location immobilière avec React",
+    "details": "Dans ce projet, j’ai implémenté le front-end d’une application en utilisant React et React Router pour une navigation fluide entre les pages. J’ai travaillé sur la logique des composants et la présentation des données, en m'appuyant sur des maquettes et des données simulées. J’ai également utilisé Vite pour la configuration initiale et Node.js pour l’exécution de JavaScript en dehors du navigateur.",
+    "objectives": [
+      "Initialiser une application avec Create React App",
+      "Configurer la navigation entre les pages de l'application avec React Router",
+      "Développer des éléments de l'interface d'un site web grâce à des composants React"
+    ],
+    "technologies": [
+      "/img/logos/sass.svg",
+      "/img/logos/javascript.svg",
+      "/img/logos/react.svg"
+    ],
+    "repository": "https://github.com/s-095/OC_P7_kasa",
+    "website":null
+  },
+  
+  {
+    "img": "/img/projects/nina-carducci.png",
+    "title": "Nina Carducci",
+    "description": "Optimisation du site d'une photographe",
+    "details":"Dans ce projet, j’ai optimisé le référencement d’un site en améliorant ses performances et son accessibilité. J’ai identifié les problèmes de chargement, proposé et appliqué des recommandations pour accélérer le site et améliorer sa structure. À l’aide d’outils comme Lighthouse et Wave, j’ai réalisé un rapport comparatif avant/après pour illustrer les résultats et expliquer l’impact des modifications.",
+    "objectives": [
+      "Optimiser la performance d'un site web",
+      "Améliorer le référencement naturel (SEO)",
+      "Augmenter l'accessibilité pour tous les utilisateurs"
+    ],
+    "technologies": [
+      "/img/logos/html.svg",
+      "/img/logos/css.svg",
+      "/img/logos/wave.jpg"
+    ],
+    "repository": "https://github.com/s-095/OC_P8_nina-carducci",
+    "website":"https://s-095.github.io/OC_P8_nina-carducci/"
+  },
+  {
+    "img": "/img/projects/argent-bank.webp",
+    "title": "ArgentBank",
+    "description": "Implémentation du front-end d'une application bancaire avec React",
+    "details":"Dans ce projet, j'ai développé le front-end d'une application bancaire avec React et Redux pour offrir une interface utilisateur dynamique et réactive. J'ai intégré le front-end avec le back-end via des appels API REST, en assurant une communication fluide entre le client et le serveur. J'ai conçu un tableau de bord responsive, utilisé Redux pour gérer un état global cohérent, et Swagger pour documenter les points d'accès de l'API. Ce projet m'a permis d'améliorer mes compétences en développement d'applications full-stack.",
+    "objectives": [
+      "Afficher les données du back end sur l'interface via des appels API",
+      "Configurer des routes API pour la communication client / serveur",
+      "Implémenter la gestion des données avec Redux pour assurer le fonctionnement du front"
+    ],
+    "technologies": [
+      "/img/logos/sass.svg",
+      "/img/logos/react.svg",
+      "/img/logos/redux.png",
+      "/img/logos/swagger.png"
+    ],
+    "repository": "https://github.com/s-095/OC_P10_ArgentBank_frontend",
+    "website":null
+  }
+]

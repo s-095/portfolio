@@ -1,6 +1,8 @@
 @use '../components/Navbar/navbar.scss';
 @use '../components/Hero/hero.scss';
 @use '../components/Projects/projects.scss';
+@use '../components/ProjectSlide/projectslide.scss';
+@use '../components/ProjectModal/ProjectModal.scss';
 @use '../components/About/about.scss';
 @use '../components/Contact/contact.scss';
 @use 'variables' as *;
@@ -23,8 +25,8 @@ section {
 
 .main {
     background-image: url(../assets/mountains-bg.avif);
-        background-size: cover; // Ajuste l'image pour couvrir toute la zone
-        background-position: center; // Centre l'image
-        background-repeat: no-repeat; // Empêche la répétition de l'image
-        background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }

@@ -1,0 +1,10 @@
+.contact h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #2b6d79;
+  color: white;
+  padding: 12px;
+  box-shadow: 0px 15px 16px -13px #6c716f;
+  z-index: 2;
+}
