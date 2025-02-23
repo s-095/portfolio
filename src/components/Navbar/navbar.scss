@@ -36,3 +36,21 @@ ul {
     display: flex;
     gap: 34px;
 }
+
+// RESPONSIVE DESIGN
+
+@media (max-width: 768px) {
+    .navbar {
+        ul {
+            flex-wrap: wrap;
+            row-gap: 5px;
+            column-gap: 23px;
+            justify-content: center;
+
+            a {
+                padding: unset;
+                font-size: 14px;
+            }
+        }
+    }
+}

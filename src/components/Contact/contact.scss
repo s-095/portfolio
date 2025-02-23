@@ -3,9 +3,10 @@
 .contact {
     display: flex;
     flex-direction: column;
-    background-color: #ffffffd6;
+    background-color: #d4d4d4bd;
     position: relative;
     height: 95vh;
+    overflow: hidden;
 
     h2 {
         font-size: 20px;
@@ -21,62 +22,95 @@
     .contact-container {
         display: flex;
         justify-content: center;
+        height: 100%;
+        align-items: center;
 
         .contact-form {
             display: flex;
             flex-direction: column;
             padding: 20px;
             margin: 70px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
+            background-color: $primary-color;
+            border-radius: 25px;
             box-shadow: 0 4px 6px rgb(0 0 0 / 23%);
-            ;
-            width: 50%;
-            height: 600px;
+            width: 44%;
             justify-content: center;
             align-items: center;
 
             h3 {
-                font-size: 25px;
+                font-size: 22px;
                 margin-bottom: 37px;
+                color: white;
+                text-align: center;
             }
 
             .form-group {
                 display: flex;
                 flex-direction: column;
-                width: 55%;
+                width: 80%;
                 margin-bottom: 15px;
-            }
 
-            label {
-                font-size: 14px;
-                font-weight: bold;
-                color: #555;
-                margin-bottom: 5px;
-            }
-
-            input,
-            textarea {
-                padding: 12px;
-                font-size: 16px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                outline: none;
-                transition: border-color 0.3s;
-
-                &:focus {
-                    border-color: $primary-color;
+                label {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #c4bfbf;
+                    margin-bottom: 5px;
                 }
-            }
 
-            textarea {
-                min-height: 120px;
-                resize: vertical;
+                input,
+                textarea {
+                    padding: 12px;
+                    font-size: 16px;
+                    border: 1px solid #ccc;
+                    border-radius: 14px;
+                    outline: none;
+                    transition: border-color 0.3s;
+                    color: $primary-color;
+                    box-shadow: 0px 15px 16px -19px #102a2d;
+
+                    &:focus {
+                        border-color: $primary-color;
+                    }
+                }
+
+                p {
+                    color: white;
+                    font-size: 12px;
+                    font-style: italic;
+                    padding: 2px;
+                }
+
+                input::placeholder,
+                textarea::placeholder {
+                    color: rgba(154, 150, 150, 0.6);
+                    font-weight: 400;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                textarea {
+                    min-height: 120px;
+                    resize: vertical;
+                }
             }
 
             button {
                 padding-inline: 54px;
                 margin-top: 32px;
+                background-color: white;
+                color: $primary-color;
+                box-shadow: 0px 15px 16px -19px #102a2d;
+                font-weight: 600;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: darken(white, 10%);
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                }
             }
         }
     }
@@ -93,6 +127,96 @@
         &:hover {
             color: #144148;
             filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.3));
+        }
+    }
+
+    .popup-success {
+        position: fixed;
+        bottom: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #4caf50;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 11px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        font-weight: bold;
+        z-index: 1000;
+        animation: fadeInOut 3s ease-in-out;
+    }
+
+    .popup-error {
+        position: fixed;
+        bottom: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #c76464;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 11px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        font-weight: bold;
+        z-index: 1000;
+        animation: fadeInOut 3s ease-in-out;
+    }
+
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(10px);
+        }
+
+        10% {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        90% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(10px);
+        }
+    }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .contact {
+        .contact-container {
+            .contact-form {
+                height: 94%;
+                width: 100%;
+                margin: unset;
+                border-radius: 0px;
+
+                .form-group {
+                    width: 90%;
+                }
+            }
+        }
+
+        .github-link {
+            font-size: 18px;
+            color: white;
+        }
+
+        .popup-success {
+            bottom: 108px;
+            left: 50%;
+            padding: 8px 7px;
+            font-size: 11px;
+        }
+
+        .popup-error {
+            bottom: 108px;
+            left: 50%;
+            padding: 8px 7px;
+            font-size: 11px;
         }
     }
 }

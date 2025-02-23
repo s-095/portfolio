@@ -9,65 +9,199 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  padding: 15px;
 }
 
 .modal-content {
+  position: relative;
   background-color: white;
-  padding-bottom: 20px;
+  padding: 20px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 70%;
+  max-width: 700px;
   text-align: center;
+  overflow-y: auto;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .modal-content h2 {
-  font-size: 16px;
-  border-radius: 20px 20px 0px 0px;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin-top: -3%;
+  width: 94%;
+  box-shadow: 0px 15px 8px -11px #b2b7b5;
+  display: flex;
+  justify-content: center;
+}
+.modal-content h2 img {
+  height: 30px;
+  color: #2b6d79;
+  font-size: 8px;
 }
 .modal-content p {
-  font-size: 18px;
-  margin: 20px;
+  font-size: 15px;
+  margin: 30px 20px 30px 20px;
   text-align: justify;
-  margin: 40px 8%;
+  line-height: 1.5;
+  color: #2b6d79;
 }
 .modal-content .objectives-section {
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: #2b6d79;
+  padding: 20px;
+  color: white;
+  border-radius: 20px;
+  align-items: center;
+  width: 94%;
+  box-shadow: 0px 15px 8px -11px #b2b7b5;
 }
 .modal-content .objectives-section h3 {
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  border-bottom: solid 1px white;
 }
 .modal-content .objectives-section ul {
-  padding-left: 20px;
-  list-style-type: disc;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 16px;
 }
-.modal-content .objectives-section li {
+.modal-content .objectives-section ul li {
   font-size: 16px;
   margin: 5px 0;
+  list-style-type: disc;
+  padding-left: 9px;
 }
 .modal-content .technologies-section {
-  margin: 20px;
+  width: 94%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .modal-content .technologies-section h3 {
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 .modal-content .technologies-section ul {
-  padding-left: 20px;
-  justify-content: center;
-  display: flex;
+  padding-left: 0;
   list-style-type: none;
-  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 46px;
 }
 .modal-content .technologies-section ul li {
   font-size: 16px;
   margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.modal-content .technologies-section ul li img {
+.modal-content .technologies-section hr {
+  width: 100%;
+  margin-bottom: 22px;
+  margin-top: 30px;
+  border: none;
+  height: 1px;
+  background-color: #c3c9cb;
+}
+.modal-content .technologies-section img {
   width: 40px;
   height: 40px;
+  max-width: 100%;
 }
 
-button {
+.close-button {
+  position: relative;
+  top: -7px;
+  right: -49%;
+  background: none;
+  border: none;
+  font-size: 16px;
   cursor: pointer;
+  color: #a6b0b2;
+  padding: 2px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  z-index: 10;
+}
+.close-button:hover {
+  color: white;
+  background-color: #2b6d79;
+}
+.close-button svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    max-height: 85vh;
+    padding: 15px;
+  }
+  .modal-content h2 {
+    font-size: 18px;
+    padding: 2px;
+  }
+  .modal-content h2 img {
+    height: 20px;
+  }
+  .modal-content p {
+    font-size: 12px;
+    margin: 15px;
+    margin-top: 23px;
+  }
+  .modal-content .objectives-section {
+    font-size: 16px;
+  }
+  .modal-content .objectives-section h3 {
+    font-size: 16px;
+  }
+  .modal-content .objectives-section ul {
+    gap: 3px;
+  }
+  .modal-content .objectives-section ul li {
+    font-size: 12px;
+  }
+  .modal-content .objectives-section img {
+    width: 30px;
+    height: 30px;
+  }
+  .modal-content .technologies-section {
+    font-size: 16px;
+  }
+  .modal-content .technologies-section h3 {
+    font-size: 16px;
+  }
+  .modal-content .technologies-section ul {
+    gap: 30px;
+  }
+  .modal-content .technologies-section ul li {
+    font-size: 12px;
+  }
+  .modal-content .technologies-section img {
+    width: 30px;
+    height: 30px;
+  }
+  .modal-content .close-button svg {
+    width: 16px;
+    height: 16px;
+  }
 }

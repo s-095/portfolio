@@ -41,9 +41,10 @@ button {
     border: none;
     border-radius: 38px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s, transform 0.2s ease;
 
     &:hover {
         background-color: color.adjust($primary-color, $lightness: -10%);
+        transform: scale(1.05);
     }
 }

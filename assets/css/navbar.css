@@ -32,3 +32,17 @@ ul {
   display: flex;
   gap: 34px;
 }
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-wrap: wrap;
+    row-gap: 5px;
+    -moz-column-gap: 23px;
+         column-gap: 23px;
+    justify-content: center;
+  }
+  .navbar ul a {
+    padding: unset;
+    font-size: 14px;
+  }
+}
