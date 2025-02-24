@@ -1,6 +1,6 @@
 [
   {
-    "img": "/img/projects/booki.png",
+    "img": "/img/projects/booki.webp",
     "title": "Booki",
     "logo":"/img/logos/booki.svg",
     "description": "Création de la page d'accueil d'une agence de voyage",
@@ -19,9 +19,9 @@
     "website":"https://s-095.github.io/OC_P3_booki/"
   },
   {
-    "img": "/img/projects/ohmyfood.png",
+    "img": "/img/projects/ohmyfood.webp",
     "title": "Ohmyfood",
-    "logo":"/img/logos/ohmyfood.png",
+    "logo":"/img/logos/ohmyfood.svg",
     "description": "Amélioration de l'interface d'un site mobile avec des animations CSS",
     "details": "Dans ce projet, j’ai développé l'interface mobile-first du site d’une start-up en intégrant une maquette responsive. J’ai utilisé Sass pour structurer et maintenir les styles, ajouté des animations CSS pour améliorer l'expérience utilisateur, et versionné le projet avec Git et GitHub pour une meilleure gestion.",
     "objectives": [
@@ -40,7 +40,7 @@
     "website":"https://s-095.github.io/OC_P4_ohmyfood/"
   },
   {
-    "img": "/img/projects/sophie-bluel.png",
+    "img": "/img/projects/sophie-bluel.webp",
     "title": "Sophie Bluel",
     "logo":"/img/logos/sophie-bluel.svg",
     "description": "Création d'une page dynamique avec Javascript",
@@ -59,7 +59,7 @@
     "website":null
   },
   {
-    "img": "/img/projects/kasa.png",
+    "img": "/img/projects/kasa.webp",
     "title": "Kasa",
     "logo":"/img/logos/kasa.svg",
     "description": "Création d'une application web de location immobilière avec React",
@@ -79,7 +79,7 @@
   },
   
   {
-    "img": "/img/projects/nina-carducci.png",
+    "img": "/img/projects/nina-carducci.webp",
     "title": "Nina Carducci",
     "logo":"/img/logos/nina-carducci.svg",
     "description": "Optimisation du site d'une photographe",
@@ -100,7 +100,7 @@
   {
     "img": "/img/projects/argent-bank.webp",
     "title": "ArgentBank",
-    "logo":"/img/logos/argentbank.png",
+    "logo":"/img/logos/argentbank.svg",
     "description": "Implémentation du front-end d'une application bancaire avec React",
     "details":"Dans ce projet, j'ai développé le front-end d'une application bancaire avec React et Redux pour offrir une interface utilisateur dynamique et réactive. J'ai intégré le front-end avec le back-end via des appels API REST, en assurant une communication fluide entre le client et le serveur. J'ai conçu un tableau de bord responsive, utilisé Redux pour gérer un état global cohérent, et Swagger pour documenter les points d'accès de l'API. Ce projet m'a permis d'améliorer mes compétences en développement d'applications full-stack.",
     "objectives": [

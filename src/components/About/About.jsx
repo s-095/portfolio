@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PencilIcon from '../../assets/img/pencil-icon.svg';
 import VSCode from '../../assets/img/vscode.svg';
 import GitHub from '../../assets/img/github.svg';
@@ -16,9 +16,21 @@ import Git from '../../assets/img/git.svg';
 const About = () => {
     const [clickedItem, setClickedItem] = useState(null);
 
-    const handleClick = (alt) => {
+    const handleClick = (event, alt) => {
+        event.stopPropagation();
         setClickedItem((prev) => (prev === alt ? null : alt));
     };
+
+    const handleOutsideClick = () => {
+        setClickedItem(null);
+    };
+
+    useEffect(() => {
+        document.addEventListener('click', handleOutsideClick);
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
 
     const tools = [
         { src: VSCode, alt: 'VSCode' },
@@ -61,7 +73,7 @@ const About = () => {
                     <h3>Outils</h3>
                     <div className='tools-content'>
                         {tools.map(({ src, alt }) => (
-                            <div key={alt} onClick={() => handleClick(alt)} className='clickable-item'>
+                            <div key={alt} onClick={(event) => handleClick(event, alt)} className='clickable-item'>
                                 {clickedItem === alt ? <span>{alt}</span> : <img src={src} alt={`Logo ${alt}`} />}
                             </div>
                         ))}
@@ -71,7 +83,7 @@ const About = () => {
                     <h3>Compétences</h3>
                     <div className='skills-content'>
                         {skills.map(({ src, alt }) => (
-                            <div key={alt} onClick={() => handleClick(alt)} className='clickable-item'>
+                            <div key={alt} onClick={(event) => handleClick(event, alt)} className='clickable-item'>
                                 {clickedItem === alt ? <span>{alt}</span> : <img src={src} alt={`Logo ${alt}`} />}
                             </div>
                         ))}
