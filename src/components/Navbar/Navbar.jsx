@@ -10,12 +10,10 @@ const Navbar = () => {
         { id: "contact", label: "Contact" },
     ];
 
-    // Fonction de détection du scroll
     useEffect(() => {
         const handleScroll = () => {
             const scrollPos = window.scrollY + window.innerHeight / 2;
 
-            // Parcourt les sections pour déterminer celle qui est active
             navLinks.forEach((link) => {
                 const element = document.getElementById(link.id);
                 if (element && element.offsetTop <= scrollPos && element.offsetTop + element.offsetHeight > scrollPos) {
@@ -28,7 +26,6 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Fonction pour faire défiler la page vers la section
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
