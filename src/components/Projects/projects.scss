@@ -24,3 +24,13 @@
         height: 92%;
     }
 }
+
+@media (max-width: 768px) {
+    .projects {
+        /* background-color: #e1e1e1; */
+        background-image: url(../assets/mountains-bg.avif);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

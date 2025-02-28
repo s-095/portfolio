@@ -131,6 +131,7 @@
                 width: 100%;
                 box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 
+
                 .slide-img {
                     max-height: 300px;
                 }
@@ -174,22 +175,29 @@
             border-style: solid;
             border-width: 3px;
             border-color: white;
+            transition: none;
 
             &:hover {
-                color: white;
+                background-color: white;
+                color: $primary-color;
+            }
+
+            &:active {
+                background-color: #e1e1e1;
+                color: #1d5863;
             }
         }
 
         .slide-prev {
             left: 15px;
             border-radius: 20px 0px 0px 20px;
-            border-right: white;
+            border-right-style: none;
         }
 
         .slide-next {
             right: 15px;
             border-radius: 0px 20px 20px 0px;
-            border-left: white;
+            border-left-style: none;
         }
     }
 }

@@ -8,8 +8,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                {/* Bouton de fermeture avec l'icône FontAwesome */}
-                <button className="close-button" onClick={onClose}>
+                <button className="close-button" onClick={onClose} aria-label="Fermer la modale">
                     <FontAwesomeIcon icon={faXmark} />
                 </button>
 

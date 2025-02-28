@@ -149,18 +149,24 @@
     border-style: solid;
     border-width: 3px;
     border-color: white;
+    transition: none;
   }
   .project-slide .slide-btn:hover {
-    color: white;
+    background-color: white;
+    color: #2b6d79;
+  }
+  .project-slide .slide-btn:active {
+    background-color: #e1e1e1;
+    color: #1d5863;
   }
   .project-slide .slide-prev {
     left: 15px;
     border-radius: 20px 0px 0px 20px;
-    border-right: white;
+    border-right-style: none;
   }
   .project-slide .slide-next {
     right: 15px;
     border-radius: 0px 20px 20px 0px;
-    border-left: white;
+    border-left-style: none;
   }
 }

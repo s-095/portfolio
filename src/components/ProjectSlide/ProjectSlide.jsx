@@ -28,24 +28,31 @@ const ProjectSlide = ({ projects }) => {
 
     return (
         <div className="project-slide">
-            <button className="slide-btn slide-prev" onClick={handlePrev}>❮</button>
+            <button className="slide-btn slide-prev"
+                onClick={handlePrev}
+                aria-label="Voir le projet précédent">❮</button>
             <div className="slide-content">
                 <div className="slide-card">
-                    <div className='slide-img'>
+                    <div className="slide-img">
                         <img src={currentProject.img} alt={currentProject.title} />
                     </div>
-                    <div className='slide-txt'>
+                    <div className="slide-txt">
                         <h3>{currentProject.title}</h3>
                         <p>{currentProject.description}</p>
-                        <div className='slide-links'>
+                        <div className="slide-links">
                             <button onClick={openModal}>En savoir plus</button>
-                            <a href={currentProject.repository} target="_blank" rel="noopener noreferrer">
+                            <a
+                                href={currentProject.repository}
+                                target="_blank" rel="noopener noreferrer"
+                                aria-label={`Voir le repository GitHub de ${currentProject.title}`}>
                                 <button>
                                     <FontAwesomeIcon icon={faGithub} />
                                 </button>
                             </a>
                             {currentProject.website && (
-                                <a href={currentProject.website} target="_blank" rel="noopener noreferrer">
+                                <a href={currentProject.website}
+                                    target="_blank" rel="noopener noreferrer"
+                                    aria-label={`Voir le site web de ${currentProject.title}`}>
                                     <button>
                                         <FontAwesomeIcon icon={faGlobe} />
                                     </button>
@@ -55,7 +62,9 @@ const ProjectSlide = ({ projects }) => {
                     </div>
                 </div>
             </div>
-            <button className="slide-btn slide-next" onClick={handleNext}>❯</button>
+            <button className="slide-btn slide-next"
+                onClick={handleNext}
+                aria-label="Voir le projet suivant">❯</button>
 
             <ProjectModal
                 project={currentProject}

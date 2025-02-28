@@ -8,6 +8,7 @@
     padding-bottom: 206px;
     overflow: hidden;
 
+
     .hero-txt {
         display: flex;
         flex-direction: column;
@@ -47,6 +48,10 @@
 @media (max-width: 768px) {
     .hero {
         padding-bottom: 150px;
+        background-image: url(../src/assets/mountains-bg.avif);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 
         .hero-txt {
             padding-inline: 10%;

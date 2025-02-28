@@ -39,21 +39,22 @@ const Contact = () => {
             <div className="contact-container">
                 <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="contact-form">
                     <h3>Laissez-moi un message</h3>
+
                     <div className="form-group">
                         <input
                             type="text"
                             id="name"
-                            placeholder="Nom"
+                            placeholder="Entrez votre nom"
                             {...register("name", { required: "Le nom est obligatoire" })}
                         />
-                        {errors.name && <p>{errors.name.message}</p>}
+                        {errors.name && <p className="error-msg">{errors.name.message}</p>}
                     </div>
 
                     <div className="form-group">
                         <input
                             type="email"
                             id="email"
-                            placeholder="Email"
+                            placeholder="Entrez votre email"
                             {...register("email", {
                                 required: "L'email est obligatoire",
                                 pattern: {
@@ -62,19 +63,19 @@ const Contact = () => {
                                 }
                             })}
                         />
-                        {errors.email && <p>{errors.email.message}</p>}
+                        {errors.email && <p className="error-msg">{errors.email.message}</p>}
                     </div>
 
                     <div className="form-group">
                         <textarea
                             id="message"
-                            placeholder="Message"
+                            placeholder="Écrivez votre message ici..."
                             {...register("message", { required: "Le message est obligatoire" })}
                         />
-                        {errors.message && <p>{errors.message.message}</p>}
+                        {errors.message && <p className="error-msg">{errors.message.message}</p>}
                     </div>
 
-                    <button type="submit">Envoyer</button>
+                    <button type="submit" aria-label="Envoyer le message">Envoyer</button>
                 </form>
             </div>
 
@@ -83,13 +84,22 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="github-link"
+                aria-label="Visitez mon profil GitHub"
             >
                 <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
 
-            {successMessage && <div className="popup-success">Message envoyé avec succès !</div>}
+            {successMessage && (
+                <div className="popup-success" aria-live="assertive">
+                    Message envoyé avec succès !
+                </div>
+            )}
 
-            {errorMessage && <div className="popup-error">Erreur lors de l'envoi du message.</div>}
+            {errorMessage && (
+                <div className="popup-error" aria-live="assertive">
+                    Erreur lors de l'envoi du message.
+                </div>
+            )}
         </section>
     );
 };

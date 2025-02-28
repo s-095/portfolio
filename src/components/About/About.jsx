@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PencilIcon from '../../assets/img/pencil-icon.svg';
 import VSCode from '../../assets/img/vscode.svg';
 import GitHub from '../../assets/img/github.svg';
@@ -14,21 +14,27 @@ import ReactLogo from '../../assets/img/react.svg';
 import Git from '../../assets/img/git.svg';
 
 const About = () => {
-    const [clickedItem, setClickedItem] = useState(null);
+    const [activeItem, setActiveItem] = useState(null);
+    const timeoutRef = useRef(null);
 
-    const handleClick = (event, alt) => {
-        event.stopPropagation();
-        setClickedItem((prev) => (prev === alt ? null : alt));
-    };
+    const handleItemClick = (alt) => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
 
-    const handleOutsideClick = () => {
-        setClickedItem(null);
+        setActiveItem(alt);
+
+        timeoutRef.current = setTimeout(() => {
+            setActiveItem(null);
+            timeoutRef.current = null;
+        }, 1000);
     };
 
     useEffect(() => {
-        document.addEventListener('click', handleOutsideClick);
         return () => {
-            document.removeEventListener('click', handleOutsideClick);
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
         };
     }, []);
 
@@ -51,40 +57,50 @@ const About = () => {
     ];
 
     return (
-        <section id="about" className='about'>
+        <section id="about" className="about">
             <h2>À propos</h2>
-            <div className='about-content'>
-                <div className='about-title'>
+            <div className="about-content">
+                <div className="about-title">
                     <h3>Entre créativité et technologie,</h3>
                 </div>
-                <div className='about-txt'>
+                <div className="about-txt">
                     <p>Guidée par mon attrait pour <em>l'art et la photographie</em>, j'ai également depuis longtemps fait preuve d'un intérêt pour <em>l'informatique</em>,
                         notamment à travers <em>l'édition de contenus visuels</em>.
                         Cette passion pour la <em>créativité</em> et la <em>technologie</em> m'a conduite à suivre une formation chez OpenClassrooms
                         afin de me spécialiser dans le <em>développement web front-end</em>,
                         un domaine où je peux combiner design et expérience utilisateur pour créer des <em>interfaces modernes et fonctionnelles</em>.</p>
                 </div>
-                <div className='about-img'>
-                    <img src={PencilIcon} alt='pencil icon' />
+                <div className="about-img">
+                    <img src={PencilIcon} alt="Icon d'une bulle d'écriture" />
                 </div>
             </div>
-            <div className='tools-n-skills'>
-                <div className='tools'>
+            <div className="tools-n-skills">
+                <div className="tools">
                     <h3>Outils</h3>
-                    <div className='tools-content'>
+                    <div className="tools-content">
                         {tools.map(({ src, alt }) => (
-                            <div key={alt} onClick={(event) => handleClick(event, alt)} className='clickable-item'>
-                                {clickedItem === alt ? <span>{alt}</span> : <img src={src} alt={`Logo ${alt}`} />}
+                            <div
+                                key={alt}
+                                onClick={() => handleItemClick(alt)}
+                                className={`clickable-item ${activeItem === alt ? 'show-text' : ''}`}
+                            >
+                                <img className="item-icon" src={src} alt={`Logo ${alt}`} />
+                                <span className="item-text">{alt}</span>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className='skills'>
+                <div className="skills">
                     <h3>Compétences</h3>
-                    <div className='skills-content'>
+                    <div className="skills-content">
                         {skills.map(({ src, alt }) => (
-                            <div key={alt} onClick={(event) => handleClick(event, alt)} className='clickable-item'>
-                                {clickedItem === alt ? <span>{alt}</span> : <img src={src} alt={`Logo ${alt}`} />}
+                            <div
+                                key={alt}
+                                onClick={() => handleItemClick(alt)}
+                                className={`clickable-item ${activeItem === alt ? 'show-text' : ''}`}
+                            >
+                                <img className="item-icon" src={src} alt={`Logo ${alt}`} />
+                                <span className="item-text">{alt}</span>
                             </div>
                         ))}
                     </div>
